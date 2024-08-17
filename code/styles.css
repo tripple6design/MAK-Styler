@@ -1,0 +1,45 @@
+*, * > * {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    font-size:1em;
+    color:black;
+    background:radial-gradient(purple, black);
+    height:98vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: white;
+    border-radius: 3px;
+    padding:1rem;
+    width:95%;
+    height:95%;
+    overflow: auto;
+    opacity: .90;
+}
+
+header {
+    text-align: center;
+}
+
+textarea {
+    width:95%;
+    height:33vh;
+    margin:2em auto;
+    resize: none;
+    border:1px solid slategray;
+    transition: border .2s, background-color .2s;
+    box-shadow: 3px 3px 10px rgba(0,0,0,.3);
+}
+
+textarea:focus {
+    background-color: antiquewhite;
+    border-color:black;
+}
