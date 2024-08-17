@@ -5,6 +5,7 @@ EMPTY="",
 fragment=document.createElement("article");
 
 inputMarkup.addEventListener("input", process);
+outputMarkup.addEventListener("input", updateOutputfromOutputMarkup);
 
 outputMarkup.is=function(string){this.value=string;}
 outputMarkup.clear=function(){this.is(EMPTY);}
@@ -37,13 +38,18 @@ function process() {
         fragment.is(inputMarkup.value);
         fragment.remove("style");
 
-        output.clear();
         outputMarkup.clear();
-
-        output.is(fragment.innerHTML);
         outputMarkup.is(fragment.innerHTML);
+        
+        updateOutputfromOutputMarkup();
 
     }
 
+    return;
+}
+
+function updateOutputfromOutputMarkup() {
+    output.clear();
+    output.is(outputMarkup.value);
     return;
 }
